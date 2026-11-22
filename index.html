@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio Acadêmico de Vitor Bomfim Cunha — Estudante de DSM na FATEC São José dos Campos, Desenvolvedor e futuro Arquiteto de Software." />
+  <title>VITOR BOMFIM CUNHA // TACTICAL PORTFOLIO — DSM FATEC SJC</title>
+  <link rel="icon" type="image/png" href="assets/diamond-dogs.png" />
+
+  <!-- Google Fonts: Oswald (tactical condensed headlines), JetBrains Mono (HUD/Codec), Inter (clean academic reading) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle tactical atmosphere overlays -->
+  <div class="tactical-grid-bg" aria-hidden="true"></div>
+  <div class="scanlines-overlay" aria-hidden="true"></div>
+
+  <!-- Scroll Progress HUD Bar -->
+  <div class="hud-progress" aria-hidden="true">
+    <div class="hud-progress__bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Top Tactical Navigation -->
+  <header class="hud-header" id="top">
+    <div class="container hud-header__inner">
+      <a href="#top" class="hud-brand" aria-label="Voltar ao início">
+        <img src="assets/diamond-dogs.png" alt="Emblema Diamond Dogs" class="hud-brand__emblem" width="44" height="36" />
+        <span class="hud-brand__text">
+          <strong>VBC // DOSSIER</strong>
+          <small>FATEC SJC · DSM-02</small>
+        </span>
+      </a>
+
+      <nav class="hud-nav" id="hudNav" aria-label="Navegação principal">
+        <a href="#apresentacao" class="hud-nav__link active" data-section="apresentacao"><span>01</span> Perfil</a>
+        <a href="#projetos-api" class="hud-nav__link" data-section="projetos-api"><span>02</span> APIs FATEC</a>
+        <a href="#experiencia" class="hud-nav__link" data-section="experiencia"><span>03</span> Carreira</a>
+        <a href="#projeto-pessoal" class="hud-nav__link" data-section="projeto-pessoal"><span>04</span> Lab IA</a>
+        <a href="#curriculo" class="hud-nav__link" data-section="curriculo"><span>05</span> Currículo</a>
+        <a href="#contato" class="hud-nav__link hud-nav__link--cta" data-section="contato"><span>06</span> Codec</a>
+      </nav>
+
+      <button class="hud-menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2.1 APRESENTAÇÃO PESSOAL (HERO DOSSIER)
+         ========================================================= -->
+    <section id="apresentacao" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <div class="hud-tag">
+            <span class="status-dot"></span>
+            <span>TACTICAL PORTFOLIO ACTION // FILE ID: DSM-2026-02</span>
+          </div>
+
+          <p class="hero__kicker">PORTFÓLIO ACADÊMICO &amp; PROFISSIONAL</p>
+          <h1 class="hero__title">
+            <span class="hero__title-line">VITOR BOMFIM</span>
+            <span class="hero__title-line hero__title-line--crimson">CUNHA</span>
+          </h1>
+          <div class="hero__subtitle-bar">
+            <span>DESENVOLVEDOR &amp; FUTURO ARQUITETO DE SOFTWARE</span>
+          </div>
+
+          <div class="dossier-meta">
+            <div class="dossier-meta__item">
+              <span class="dossier-meta__label">FORMAÇÃO ATUAL</span>
+              <span class="dossier-meta__value">2º Semestre — Desenvolvimento de Software Multiplataforma (DSM)</span>
+              <span class="dossier-meta__sub">FATEC São José dos Campos — Prof. Jessen Vidal</span>
+            </div>
+            <div class="dossier-meta__item">
+              <span class="dossier-meta__label">ATUAÇÃO ATUAL</span>
+              <span class="dossier-meta__value">Desenvolvedor na Kaffa Tech</span>
+              <span class="dossier-meta__sub">Ex-Aprendiz de Suporte na Cardway</span>
+            </div>
+          </div>
+
+          <div class="briefing-box">
+            <div class="briefing-box__header">
+              <span>// OBJETIVOS ACADÊMICOS E PROFISSIONAIS</span>
+              <span class="briefing-box__code">PRIORITY: HIGH</span>
+            </div>
+            <p>
+              Construir uma trajetória sólida como <strong>Desenvolvedor e Arquiteto de Software</strong>, unindo base acadêmica rigorosa na FATEC SJC com prática real em engenharia de sistemas. Meu foco está no design de arquiteturas limpas, escaláveis e sustentáveis — integrando back-end robusto, modelagem de dados consistente, APIs bem estruturadas e soluções com Inteligência Artificial aplicada a problemas reais de negócio.
+            </p>
+          </div>
+
+          <div class="interest-block">
+            <span class="interest-block__label">ÁREAS DE INTERESSE</span>
+            <ul class="tactical-chips">
+              <li>Arquitetura de Software</li>
+              <li>Desenvolvimento Back-end &amp; Full Stack</li>
+              <li>APIs REST &amp; Modelagem de Dados</li>
+              <li>Agentes de IA &amp; LangChain</li>
+              <li>Engenharia de Produto (Scrum / PO)</li>
+            </ul>
+          </div>
+
+          <div class="hero__actions">
+            <a href="#projetos-api" class="btn btn--primary">
+              <span>ACESSAR MISSÕES API</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contato" class="btn btn--ghost">
+              <span>FREQ 140.85 // CONTATO</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Operative ID Card / Portrait -->
+        <aside class="hero__portrait-col reveal">
+          <div class="operative-card">
+            <div class="operative-card__hud-top">
+              <span>OPERATIVE PROFILE</span>
+              <span>STATUS: ACTIVE</span>
+            </div>
+
+            <div class="reticle-frame">
+              <span class="reticle-corner reticle-corner--tl" aria-hidden="true"></span>
+              <span class="reticle-corner reticle-corner--tr" aria-hidden="true"></span>
+              <span class="reticle-corner reticle-corner--bl" aria-hidden="true"></span>
+              <span class="reticle-corner reticle-corner--br" aria-hidden="true"></span>
+
+              <img
+                src="assets/vitor-profile.jpg"
+                alt="Foto profissional de Vitor Bomfim Cunha"
+                class="operative-card__photo"
+                width="420"
+                height="420"
+              />
+              <div class="reticle-scan" aria-hidden="true"></div>
+              <img
+                src="assets/diamond-dogs.png"
+                alt="Insígnia Diamond Dogs"
+                class="operative-card__patch"
+                width="68"
+                height="56"
+              />
+              <div class="reticle-tag" aria-hidden="true">TARGET LOCK // V.B.C</div>
+            </div>
+
+            <div class="operative-card__specs">
+              <div class="spec-row">
+                <span>CODENAME</span>
+                <strong>VITOR BOMFIM</strong>
+              </div>
+              <div class="spec-row">
+                <span>BASE</span>
+                <strong>SÃO JOSÉ DOS CAMPOS - SP</strong>
+              </div>
+              <div class="spec-row">
+                <span>CURSO</span>
+                <strong>DSM · 2º SEMESTRE</strong>
+              </div>
+              <div class="spec-row">
+                <span>ROLE ALVO</span>
+                <strong class="text-crimson">DEV &amp; SOFTWARE ARCHITECT</strong>
+              </div>
+            </div>
+
+            <div class="operative-card__links">
+              <a href="https://github.com/VitorBomfim-12" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+              <a href="mailto:vbomfimcunha@gmail.com">E-MAIL ↗</a>
+              <a href="https://www.linkedin.com/in/vitor-bomfim-122339289" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Yoji Shinkawa-inspired ink brush divider -->
+      <div class="ink-divider" aria-hidden="true">
+        <svg viewBox="0 0 1200 28" preserveAspectRatio="none">
+          <path d="M0,14 L180,14 L210,8 L340,16 L510,10 L620,18 L790,11 L940,15 L1080,9 L1200,14" stroke="currentColor" stroke-width="2" fill="none" opacity="0.35"/>
+          <path d="M120,14 L420,12 L460,16 L760,13 L810,16 L1040,14" stroke="#C82323" stroke-width="2.5" fill="none" opacity="0.85"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2.2.1 PROJETOS ACADÊMICOS (API) — OBRIGATÓRIO
+         ========================================================= -->
+    <section id="projetos-api" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__index">MISSION ARCHIVE // 02.1</div>
+          <h2 class="section-header__title">PROJETOS ACADÊMICOS <span>(API — FATEC)</span></h2>
+          <p class="section-header__desc">
+            Aprendizagem por Projetos Integrados desenvolvidos na FATEC São José dos Campos com metodologia Scrum e parceiros reais de mercado. As empresas parceiras são identificadas nominalmente (sem uso de logotipo), conforme as diretrizes acadêmicas.
+          </p>
+        </div>
+
+        <!-- Mission Selector Tabs -->
+        <div class="mission-tabs reveal" role="tablist" aria-label="Selecionar Projeto API">
+          <button class="mission-tab active" role="tab" aria-selected="true" aria-controls="panel-api-2026-02" id="tab-api-2026-02" data-target="panel-api-2026-02">
+            <span class="mission-tab__code">OP-2026.02</span>
+            <span class="mission-tab__name">Sistema de Ordens de Serviço</span>
+            <span class="mission-tab__meta">Parceiro: Altave · 2º DSM · PO &amp; Dev</span>
+          </button>
+          <button class="mission-tab" role="tab" aria-selected="false" aria-controls="panel-api-2026-01" id="tab-api-2026-01" data-target="panel-api-2026-01">
+            <span class="mission-tab__code">OP-2026.01</span>
+            <span class="mission-tab__name">We Logic — Gestão de Compras</span>
+            <span class="mission-tab__meta">Parceiro: Newe Log · FawkesCode · Dev</span>
+          </button>
+        </div>
+
+        <!-- ===== API 2026.02 PANEL ===== -->
+        <article class="dossier-panel active reveal" id="panel-api-2026-02" role="tabpanel" aria-labelledby="tab-api-2026-02">
+          <div class="dossier-panel__top">
+            <div>
+              <div class="dossier-badges">
+                <span class="badge badge--crimson">API · 2º SEMESTRE DSM</span>
+                <span class="badge">PERÍODO: 2026-2</span>
+                <span class="badge badge--status">EM ANDAMENTO · EQUIPE FAWKESCODE</span>
+              </div>
+              <h3 class="dossier-panel__title">Sistema de Ordens de Serviço</h3>
+              <p class="dossier-panel__partner">
+                <strong>Empresa Parceira:</strong> Altave <em>(identificação textual sem logotipo)</em>
+              </p>
+            </div>
+            <div class="dossier-panel__links">
+              <a href="https://github.com/FawkesCode/API-2026.02" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                <span>REPOSITÓRIO GITHUB</span>
+                <span>↗</span>
+              </a>
+              <a href="https://youtu.be/NIUIERW4_Vs" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+                <span>DEMO SPRINT 1 (VÍDEO)</span>
+                <span>▶</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dossier-grid">
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>01 //</span> PROBLEMA RESOLVIDO</h4>
+              <p>
+                A operação enfrentava uma gestão de demandas fragmentada e descentralizada: diferentes times utilizavam ferramentas isoladas e processos burocráticos desconectados entre si. Essa fragmentação provocava ruídos de comunicação intersetoriais, perda de rastreabilidade no andamento dos serviços em campo e falta de visibilidade em tempo real sobre prioridades e prazos de SLA para a liderança.
+              </p>
+            </div>
+
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>02 //</span> SOLUÇÃO DESENVOLVIDA</h4>
+              <p>
+                Aplicação web full stack construída com <strong>Next.js</strong> e <strong>TypeScript</strong> que unifica todo o ciclo de vida das ordens de serviço: cadastro de projetos e abertura de tickets vinculados, indicadores visuais de SLA com ordenação automática por prioridade, registro de logs técnicos de atendimento, controle de contas e perfis (Analista Comercial, Gestor, Técnico, Suporte Interno/Externo), fluxo de aprovação de encerramento e alertas automáticos por e-mail.
+              </p>
+            </div>
+
+            <div class="dossier-block dossier-block--full">
+              <h4 class="dossier-block__title"><span>03 //</span> CONTRIBUIÇÕES PESSOAIS (PRODUCT OWNER &amp; DESENVOLVEDOR)</h4>
+              <ul class="tactical-list">
+                <li><strong>Product Ownership &amp; Engenharia de Requisitos:</strong> Atuação como Product Owner da equipe FawkesCode — elaboração e priorização do Product Backlog (24 User Stories distribuídas em 3 Sprints), definição dos critérios de <em>Definition of Ready (DoR)</em> e <em>Definition of Done (DoD)</em> e alinhamento com stakeholders.</li>
+                <li><strong>Mensageria &amp; Notificações (Back-end):</strong> Implementação da feature de envio de e-mails para gestores de equipe ao associar tickets, estruturando uma classe dedicada para encapsular o <code>Nodemailer</code> e incluir automaticamente o contexto do projeto no corpo da mensagem.</li>
+                <li><strong>Otimização Arquitetural &amp; API:</strong> Criação de rotas REST no App Router do Next.js e refatoração estrutural da página de tickets para reduzir a quantidade de requisições redundantes ao servidor.</li>
+                <li><strong>Dados, Testes &amp; Governança de Código:</strong> Desenvolvimento de scripts SQL de <em>seed</em> para popular o banco de dados via SGBD, script de teste de rotas da API e documentação da estratégia de branches e padrão de commits da equipe.</li>
+              </ul>
+            </div>
+
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>04 //</span> TECNOLOGIAS UTILIZADAS</h4>
+              <div class="tech-tags">
+                <span>Next.js 16</span>
+                <span>React 19</span>
+                <span>TypeScript</span>
+                <span>Prisma ORM</span>
+                <span>MySQL 8</span>
+                <span>Tailwind CSS</span>
+                <span>shadcn/ui</span>
+                <span>Zod</span>
+                <span>Nodemailer</span>
+                <span>Docker</span>
+                <span>Vitest</span>
+              </div>
+              <div class="architecture-mini">
+                <div class="architecture-mini__label">ESTRUTURA ARQUITETURAL</div>
+                <code>App Router (API + UI) → Controllers → Services → Prisma ORM → MySQL / Docker</code>
+              </div>
+            </div>
+
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>05 //</span> HARD SKILLS ADQUIRIDAS</h4>
+              <div class="skill-rating-list">
+                <div class="skill-rating">
+                  <span class="skill-rating__name">TypeScript &amp; Next.js (App Router)</span>
+                  <span class="skill-rating__level" title="Nível 4 de 5: Desenvolvedor Autônomo">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i>
+                    <em>Autônomo</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Design de Rotas REST &amp; Otimização</span>
+                  <span class="skill-rating__level" title="Nível 4 de 5: Desenvolvedor Autônomo">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i>
+                    <em>Autônomo</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Prisma ORM, MySQL &amp; Seeds SQL</span>
+                  <span class="skill-rating__level" title="Nível 4 de 5: Desenvolvedor Autônomo">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i>
+                    <em>Autônomo</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Mensageria (Nodemailer) &amp; Docker</span>
+                  <span class="skill-rating__level" title="Nível 3 de 5: Intermediário">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i>
+                    <em>Intermediário</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Git, Estratégia de Branches &amp; Docs</span>
+                  <span class="skill-rating__level" title="Nível 4 de 5: Desenvolvedor Autônomo">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i>
+                    <em>Autônomo</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dossier-block dossier-block--full">
+              <h4 class="dossier-block__title"><span>06 //</span> SOFT SKILLS EXERCITADAS</h4>
+              <div class="soft-skills-grid">
+                <div class="soft-skill-card">
+                  <strong>Liderança de Produto (PO)</strong>
+                  <span>Priorização de valor de negócio e condução de backlog junto ao time e parceiro.</span>
+                </div>
+                <div class="soft-skill-card">
+                  <strong>Comunicação Estratégica</strong>
+                  <span>Tradução de dores operacionais em User Stories claras, atômicas e verificáveis.</span>
+                </div>
+                <div class="soft-skill-card">
+                  <strong>Governança &amp; Organização</strong>
+                  <span>Padronização de fluxo de branches, commits, revisões e documentação técnica.</span>
+                </div>
+                <div class="soft-skill-card">
+                  <strong>Visão Sistêmica</strong>
+                  <span>Equilíbrio entre decisões de produto e performance arquitetural da aplicação.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== API 2026.01 PANEL ===== -->
+        <article class="dossier-panel" id="panel-api-2026-01" role="tabpanel" aria-labelledby="tab-api-2026-01" hidden>
+          <div class="dossier-panel__top">
+            <div>
+              <div class="dossier-badges">
+                <span class="badge badge--crimson">API · FAWKESCODE</span>
+                <span class="badge">PERÍODO: 2026-1</span>
+                <span class="badge badge--done">CONCLUÍDO</span>
+              </div>
+              <h3 class="dossier-panel__title">We Logic — Gestão de Processos de Compras</h3>
+              <p class="dossier-panel__partner">
+                <strong>Empresa Parceira:</strong> Newe Log <em>(identificação textual sem logotipo)</em>
+              </p>
+            </div>
+            <div class="dossier-panel__links">
+              <a href="https://github.com/FawkesCode/API-2026.01" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                <span>REPOSITÓRIO GITHUB</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="dossier-grid">
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>01 //</span> PROBLEMA RESOLVIDO</h4>
+              <p>
+                O ciclo de compras corporativas era conduzido de forma manual e descentralizada, gerando pedidos sem rastreabilidade, aprovações sem registro formal e ausência de visibilidade em tempo real dos níveis de estoque. Esse cenário favorecia compras não autorizadas, retrabalho entre setores e dificuldade para auditorias financeiras e operacionais.
+              </p>
+            </div>
+
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>02 //</span> SOLUÇÃO DESENVOLVIDA</h4>
+              <p>
+                O <strong>We Logic</strong> é uma aplicação desktop desenvolvida em <strong>Java</strong> com <strong>JavaFX</strong> e <strong>MySQL</strong> voltada à governança completa das aquisições: abertura de pedidos com numeração automática, fluxo formal de aprovação com parecer registrado, controle de estoque com alertas de nível mínimo, módulo de cotações comparativas entre fornecedores, registro de recebimento com nota fiscal e dashboard gerencial.
+              </p>
+            </div>
+
+            <div class="dossier-block dossier-block--full">
+              <h4 class="dossier-block__title"><span>03 //</span> CONTRIBUIÇÕES PESSOAIS (DESENVOLVEDOR BACK-END &amp; DADOS)</h4>
+              <ul class="tactical-list">
+                <li><strong>Modelagem &amp; Integridade de Banco de Dados:</strong> Criação, refatoração e prototipagem das tabelas e queries SQL no MySQL, eliminando redundâncias, corrigindo dependências de criação e implementando regras de integridade referencial (exclusão em cascata).</li>
+                <li><strong>Camada de Persistência &amp; Conexão:</strong> Implementação da classe de conexão com o banco de dados em Java, garantindo desacoplamento e segurança das credenciais.</li>
+                <li><strong>Configuração &amp; Boas Práticas de Ambiente:</strong> Estruturação inicial com Spring Boot (via Spring Initializer), adição de dependência no <code>pom.xml</code> para leitura de variáveis de ambiente (<code>.env</code>) e proteção de dados sensíveis no <code>.gitignore</code>.</li>
+              </ul>
+            </div>
+
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>04 //</span> TECNOLOGIAS UTILIZADAS</h4>
+              <div class="tech-tags">
+                <span>Java 17+</span>
+                <span>JavaFX</span>
+                <span>Spring Boot</span>
+                <span>MySQL 8</span>
+                <span>Maven (pom.xml)</span>
+                <span>Git / GitHub</span>
+                <span>Figma</span>
+              </div>
+              <div class="architecture-mini">
+                <div class="architecture-mini__label">ESTRUTURA ARQUITETURAL</div>
+                <code>JavaFX UI → Camada de Negócio Java/Spring → Conexão .env → MySQL Relacional</code>
+              </div>
+            </div>
+
+            <div class="dossier-block">
+              <h4 class="dossier-block__title"><span>05 //</span> HARD SKILLS ADQUIRIDAS</h4>
+              <div class="skill-rating-list">
+                <div class="skill-rating">
+                  <span class="skill-rating__name">MySQL, DDL/DML &amp; Integridade Referencial</span>
+                  <span class="skill-rating__level" title="Nível 4 de 5: Desenvolvedor Autônomo">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i>
+                    <em>Autônomo</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Java &amp; Programação Orientada a Objetos</span>
+                  <span class="skill-rating__level" title="Nível 3 de 5: Intermediário">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i>
+                    <em>Intermediário</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Spring Boot, Maven &amp; Variáveis .env</span>
+                  <span class="skill-rating__level" title="Nível 3 de 5: Intermediário">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i>
+                    <em>Intermediário</em>
+                  </span>
+                </div>
+                <div class="skill-rating">
+                  <span class="skill-rating__name">Versionamento Colaborativo (Git)</span>
+                  <span class="skill-rating__level" title="Nível 4 de 5: Desenvolvedor Autônomo">
+                    <i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i>
+                    <em>Autônomo</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dossier-block dossier-block--full">
+              <h4 class="dossier-block__title"><span>06 //</span> SOFT SKILLS EXERCITADAS</h4>
+              <div class="soft-skills-grid">
+                <div class="soft-skill-card">
+                  <strong>Trabalho em Equipe Ágil</strong>
+                  <span>Coordenação de entregas em Sprints de 3 semanas com equipe de 9 integrantes.</span>
+                </div>
+                <div class="soft-skill-card">
+                  <strong>Pensamento Analítico</strong>
+                  <span>Identificação e correção proativa de inconsistências lógicas e de modelagem de dados.</span>
+                </div>
+                <div class="soft-skill-card">
+                  <strong>Segurança &amp; Responsabilidade</strong>
+                  <span>Cuidado com credenciais de ambiente e padronização de código compartilhado.</span>
+                </div>
+                <div class="soft-skill-card">
+                  <strong>Adaptabilidade Técnica</strong>
+                  <span>Transição ágil entre prototipagem SQL, configuração Maven/Spring e integração com a equipe.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2.2.2 PROJETOS PROFISSIONAIS (SERVICE RECORD) — OBRIGATÓRIO
+         ========================================================= -->
+    <section id="experiencia" class="section section--alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__index">SERVICE RECORD // 02.2</div>
+          <h2 class="section-header__title">TRAJETÓRIA &amp; PROJETOS <span>PROFISSIONAIS</span></h2>
+          <p class="section-header__desc">
+            Experiências profissionais que conectam o entendimento prático das dores de usuários em operação ao desenvolvimento e à arquitetura de software em produção.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          <!-- Kaffa Tech -->
+          <article class="timeline-card timeline-card--active">
+            <div class="timeline-card__marker">
+              <span class="timeline-card__dot"></span>
+              <span class="timeline-card__status">ATUAL</span>
+            </div>
+            <div class="timeline-card__body">
+              <div class="timeline-card__header">
+                <div>
+                  <span class="timeline-card__company">KAFFA TECH</span>
+                  <h3 class="timeline-card__role">Desenvolvedor de Software</h3>
+                </div>
+                <span class="badge badge--crimson">EM ATUAÇÃO</span>
+              </div>
+              <p class="timeline-card__desc">
+                Atuação profissional no desenvolvimento de software, participando da construção, evolução e manutenção de funcionalidades em ambiente real de engenharia. A vivência diária fortalece minha base prática em organização de código, decisões de arquitetura, versionamento colaborativo e entrega contínua de valor.
+              </p>
+              <div class="timeline-card__highlights">
+                <div class="highlight-pill">
+                  <span>FOCO TÉCNICO</span>
+                  <strong>Desenvolvimento, Manutenção Evolutiva &amp; Boas Práticas de Arquitetura</strong>
+                </div>
+                <div class="highlight-pill">
+                  <span>SOFT SKILLS</span>
+                  <strong>Colaboração em Equipe de Engenharia, Autonomia &amp; Resolução de Problemas</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cardway -->
+          <article class="timeline-card">
+            <div class="timeline-card__marker">
+              <span class="timeline-card__dot"></span>
+              <span class="timeline-card__status">ANTERIOR</span>
+            </div>
+            <div class="timeline-card__body">
+              <div class="timeline-card__header">
+                <div>
+                  <span class="timeline-card__company">CARDWAY</span>
+                  <h3 class="timeline-card__role">Aprendiz de Suporte Técnico</h3>
+                </div>
+                <span class="badge">EXPERIÊNCIA ANTERIOR</span>
+              </div>
+              <p class="timeline-card__desc">
+                Atuação no suporte técnico operacional, realizando atendimento a usuários, diagnóstico inicial de incidentes, triagem de chamados e apoio à continuidade dos sistemas. Essa experiência foi decisiva para desenvolver visão centrada no usuário, clareza na comunicação técnica e disciplina na análise de causa raiz — competências diretamente aplicáveis ao design de sistemas robustos.
+              </p>
+              <div class="timeline-card__highlights">
+                <div class="highlight-pill">
+                  <span>FOCO TÉCNICO</span>
+                  <strong>Diagnóstico de Incidentes, Triagem Operacional &amp; Documentação</strong>
+                </div>
+                <div class="highlight-pill">
+                  <span>SOFT SKILLS</span>
+                  <strong>Empatia com o Usuário, Comunicação Clara &amp; Controle sob Pressão</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2.2.3 PROJETOS PESSOAIS (DESTAQUE: LANGCHAIN PROJECT)
+         ========================================================= -->
+    <section id="projeto-pessoal" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__index">R&amp;D LAB // 02.3</div>
+          <h2 class="section-header__title">PROJETO PESSOAL <span>EM DESTAQUE</span></h2>
+          <p class="section-header__desc">
+            Exploração autônoma em Arquitetura de APIs e Inteligência Artificial aplicada à análise de risco financeiro e prevenção a fraudes.
+          </p>
+        </div>
+
+        <article class="spotlight-card reveal">
+          <div class="spotlight-card__banner">
+            <div class="spotlight-card__title-group">
+              <div class="dossier-badges">
+                <span class="badge badge--crimson">FEATURED R&amp;D // AI AGENT</span>
+                <span class="badge">PYTHON · FASTAPI · LANGCHAIN</span>
+              </div>
+              <h3>Projeto Caronte — Agente de IA para KYC &amp; Prevenção a Fraudes</h3>
+              <p class="spotlight-card__repo">Repositório: <code>VitorBomfim-12/langchain_project</code></p>
+            </div>
+            <a href="https://github.com/VitorBomfim-12/langchain_project" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+              <span>VER CÓDIGO NO GITHUB</span>
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="spotlight-card__grid">
+            <div class="spotlight-card__col">
+              <div class="dossier-block">
+                <h4 class="dossier-block__title"><span>//</span> DESAFIO &amp; CONTEXTO</h4>
+                <p>
+                  Empresas de meios de pagamento (maquininhas POS) precisam auditar rapidamente o perfil de estabelecimentos e proprietários antes de aprovar crédito ou antecipação de recebíveis. Analisar manualmente padrões de <em>chargeback</em>, pulverização de CNPJs/lojas sob um mesmo CPF, ataques de velocidade (<em>velocity attacks</em>) e incoerências geográficas em transações é lento e propenso a falhas.
+                </p>
+              </div>
+
+              <div class="dossier-block">
+                <h4 class="dossier-block__title"><span>//</span> ARQUITETURA DA SOLUÇÃO</h4>
+                <p>
+                  Desenvolvi uma API REST em <strong>FastAPI</strong> organizada em camadas (<code>routes</code>, <code>schemas/DTOs</code>, <code>services</code>, <code>models</code> e <code>agents</code>) que orquestra o agente de IA <strong>Caronte</strong> usando <strong>LangChain / LangGraph</strong> e <strong>Google Gemini 2.5 Flash</strong>. O agente é obrigado por engenharia de prompt a invocar <em>Tools</em> SQL reais para auditar transações e métricas antes de emitir um parecer estruturado (validado com <strong>Pydantic</strong>) contendo o nível de risco (<code>RiskEnum</code>) e justificativa baseada em evidências.
+                </p>
+              </div>
+            </div>
+
+            <div class="spotlight-card__col">
+              <div class="blueprint-box">
+                <div class="blueprint-box__header">
+                  <span>SYSTEM BLUEPRINT // CARONTE ENGINE</span>
+                  <span>DOCKERIZED</span>
+                </div>
+                <pre class="blueprint-code"><code>[Client Request (DTO)]
+        │
+        ▼
+[FastAPI Routes] ──▶ TransactionRoutes / StoreAndOwnersRoutes
+        │
+        ▼
+[Caronte AI Agent] ──▶ LangChain + Gemini 2.5 Flash
+   │         │
+   │         ├──▶ Tool: SQL Metrics &amp; Chargeback Audit
+   │         ├──▶ Service: calcHaversine (Geo-Anomaly)
+   │         └──▶ Service: ageVerify &amp; Blacklist Check
+        │
+        ▼
+[Structured Output] ──▶ Pydantic Schema + RiskEnum Veredict
+        │
+        ▼
+[MySQL + SQLAlchemy] (Containerizado via Docker Compose)</code></pre>
+              </div>
+
+              <div class="tech-tags" style="margin-top: 1.25rem;">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>LangChain</span>
+                <span>LangGraph</span>
+                <span>Google Gemini API</span>
+                <span>Pydantic</span>
+                <span>SQLAlchemy</span>
+                <span>MySQL</span>
+                <span>Docker Compose</span>
+                <span>Haversine Geo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight-card__footer">
+            <span>Outros repositórios pessoais e acadêmicos disponíveis no GitHub: <strong>projeto_vault_senha</strong>, <strong>Prototipo_Site_Com_Flask</strong> e laboratórios de banco de dados e web.</span>
+            <a href="https://github.com/VitorBomfim-12?tab=repositories" target="_blank" rel="noopener noreferrer">EXPLORAR TODOS OS REPOSITÓRIOS ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. INFORMAÇÕES CURRICULARES & MATRIZ DE COMPETÊNCIAS
+         ========================================================= -->
+    <section id="curriculo" class="section section--alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__index">CURRICULUM &amp; ARSENAL // 03</div>
+          <h2 class="section-header__title">INFORMAÇÕES CURRICULARES &amp; <span>COMPETÊNCIAS</span></h2>
+          <p class="section-header__desc">
+            Formação acadêmica, artefatos técnicos e avaliação transparente de competências baseada em escala categórica clara (sem porcentagens arbitrárias).
+          </p>
+        </div>
+
+        <!-- Explicit Legend matching PDF Observation 2 -->
+        <div class="legend-bar reveal" aria-label="Legenda dos níveis de proficiência técnica">
+          <span class="legend-bar__title">ESCALA DE PROFICIÊNCIA:</span>
+          <span class="legend-item"><strong>NV.1</strong> Ouvi falar</span>
+          <span class="legend-item"><strong>NV.2</strong> Utilizador Básico</span>
+          <span class="legend-item"><strong>NV.3</strong> Intermediário</span>
+          <span class="legend-item"><strong>NV.4</strong> Desenvolvedor Autônomo</span>
+          <span class="legend-item"><strong>NV.5</strong> Fluente</span>
+        </div>
+
+        <div class="skills-matrix reveal">
+          <div class="matrix-card">
+            <h3 class="matrix-card__title"><span>01</span> LINGUAGENS</h3>
+            <div class="skill-rating-list">
+              <div class="skill-rating">
+                <span class="skill-rating__name">TypeScript</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Python</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">JavaScript (ES6+)</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">SQL (MySQL)</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Java</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i><em>Intermediário</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">HTML5 &amp; CSS3</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <h3 class="matrix-card__title"><span>02</span> FRAMEWORKS &amp; IA</h3>
+            <div class="skill-rating-list">
+              <div class="skill-rating">
+                <span class="skill-rating__name">Next.js &amp; React</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">FastAPI &amp; Pydantic</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">LangChain &amp; LangGraph</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i><em>Intermediário</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Prisma ORM &amp; SQLAlchemy</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Spring Boot &amp; JavaFX</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i><em>Intermediário</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Flask</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i><em>Intermediário</em></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="matrix-card">
+            <h3 class="matrix-card__title"><span>03</span> ARQUITETURA &amp; FERRAMENTAS</h3>
+            <div class="skill-rating-list">
+              <div class="skill-rating">
+                <span class="skill-rating__name">APIs REST &amp; Arquitetura em Camadas</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Modelagem Relacional &amp; Seeds</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Git, GitHub &amp; Estratégia de Branches</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Docker &amp; Docker Compose</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i><em>Intermediário</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Scrum, Backlog, DoR &amp; DoD</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><em>Autônomo</em></span>
+              </div>
+              <div class="skill-rating">
+                <span class="skill-rating__name">Linux &amp; Ambiente de Desenvolvimento</span>
+                <span class="skill-rating__level"><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i><i class="pip"></i><i class="pip"></i><em>Intermediário</em></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Formation & Curricular Artifacts -->
+        <div class="curricular-grid reveal">
+          <div class="curricular-card">
+            <span class="curricular-card__tag">FORMAÇÃO ACADÊMICA</span>
+            <h3>Tecnologia em Desenvolvimento de Software Multiplataforma (DSM)</h3>
+            <p class="curricular-card__inst">FATEC São José dos Campos — Prof. Jessen Vidal</p>
+            <p class="curricular-card__meta">2º Semestre · Em andamento</p>
+            <p class="curricular-card__text">
+              Formação superior focada em engenharia de software, arquitetura multiplataforma, desenvolvimento web/mobile, bancos de dados relacionais e não-relacionais, computação em nuvem e gestão ágil de projetos com entregas reais a cada semestre (API).
+            </p>
+          </div>
+
+          <div class="curricular-card">
+            <span class="curricular-card__tag">ARTEFATOS, APRESENTAÇÕES &amp; DOCUMENTAÇÃO</span>
+            <h3>Entregas Técnicas &amp; Documentação Ágil</h3>
+            <ul class="tactical-list tactical-list--compact">
+              <li><strong>Apresentações de Sprint Reviews (FATEC SJC):</strong> Demonstração pública de incrementos funcionais de software para avaliadores e empresas parceiras (Altave e Newe Log).</li>
+              <li><strong>Documentação de Engenharia (FawkesCode):</strong> Autoria de Product Backlog, critérios DoR/DoD, documentação de Sprints e Guia de Estratégia de Branches e Commits.</li>
+              <li><strong>Evolução Contínua:</strong> Espaço estruturado para incorporar futuras certificações técnicas, hackathons, artigos e Trabalho de Graduação (TG) ao longo do curso.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. INFORMAÇÕES DE CONTATO — MGS CODEC TERMINAL
+         ========================================================= -->
+    <section id="contato" class="section codec-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__index">DIRECT TRANSMISSION // 04</div>
+          <h2 class="section-header__title">COMUNICAÇÃO &amp; <span>CODEC</span></h2>
+          <p class="section-header__desc">
+            Selecione uma frequência abaixo para acessar meus canais diretos de contato, código-fonte e perfil profissional.
+          </p>
+        </div>
+
+        <div class="codec-terminal reveal">
+          <div class="codec-terminal__topbar">
+            <span>// CODEC COMM SYSTEM v2.026</span>
+            <span class="codec-signal"><i class="signal-bars" aria-hidden="true"></i> SIGNAL: STRONG</span>
+          </div>
+
+          <div class="codec-terminal__grid">
+            <!-- Left: Frequency & Display -->
+            <div class="codec-display">
+              <div class="codec-freq-box">
+                <span class="codec-freq-box__label">FREQUENCY</span>
+                <div class="codec-freq-box__number" id="codecFreq">140.85</div>
+                <span class="codec-freq-box__channel" id="codecChannelName">GITHUB // REPOSITÓRIOS</span>
+              </div>
+
+              <div class="codec-wave" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+
+              <div class="codec-transcript" id="codecTranscript">
+                <p><strong>[VITOR BOMFIM]:</strong> "Todos os repositórios acadêmicos, projetos com LangChain e histórico de commits estão disponíveis no meu GitHub. Canal aberto para oportunidades e projetos de engenharia."</p>
+              </div>
+            </div>
+
+            <!-- Right: Direct Contact Channels -->
+            <div class="codec-channels">
+              <div class="codec-channel-card active" data-freq="140.85" data-channel="GITHUB // REPOSITÓRIOS" data-msg="Todos os repositórios acadêmicos, projetos com LangChain e histórico de commits estão disponíveis no meu GitHub. Canal aberto para oportunidades e projetos de engenharia.">
+                <div class="codec-channel-card__meta">
+                  <span class="codec-channel-card__freq">FREQ 140.85</span>
+                  <span class="codec-channel-card__type">CÓDIGO-FONTE</span>
+                </div>
+                <h3 class="codec-channel-card__title">GitHub</h3>
+                <p class="codec-channel-card__value">github.com/VitorBomfim-12</p>
+                <a href="https://github.com/VitorBomfim-12" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">ABRIR GITHUB ↗</a>
+              </div>
+
+              <div class="codec-channel-card" data-freq="140.96" data-channel="E-MAIL // CONTATO DIRETO" data-msg="Para contato profissional, propostas, projetos de arquitetura ou dúvidas acadêmicas, envie uma transmissão direta para vbomfimcunha@gmail.com.">
+                <div class="codec-channel-card__meta">
+                  <span class="codec-channel-card__freq">FREQ 140.96</span>
+                  <span class="codec-channel-card__type">TRANSMISSÃO DIRETA</span>
+                </div>
+                <h3 class="codec-channel-card__title">E-mail</h3>
+                <p class="codec-channel-card__value">vbomfimcunha@gmail.com</p>
+                <div class="codec-channel-card__actions">
+                  <a href="mailto:vbomfimcunha@gmail.com" class="btn btn--primary btn--sm">ENVIAR E-MAIL ↗</a>
+                  <button type="button" class="btn btn--ghost btn--sm" id="copyEmailBtn" data-email="vbomfimcunha@gmail.com">COPIAR</button>
+                </div>
+              </div>
+
+              <div class="codec-channel-card" data-freq="141.12" data-channel="LINKEDIN // REDE PROFISSIONAL" data-msg="Conecte-se comigo no LinkedIn para acompanhar minha evolução em Desenvolvimento de Software Multiplataforma na FATEC SJC e minha atuação na Kaffa Tech.">
+                <div class="codec-channel-card__meta">
+                  <span class="codec-channel-card__freq">FREQ 141.12</span>
+                  <span class="codec-channel-card__type">REDE SOCIAL</span>
+                </div>
+                <h3 class="codec-channel-card__title">LinkedIn</h3>
+                <p class="codec-channel-card__value">linkedin.com/in/vitor-bomfim-122339289</p>
+                <a href="https://www.linkedin.com/in/vitor-bomfim-122339289" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">ABRIR LINKEDIN ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hud-footer">
+    <div class="container hud-footer__inner">
+      <div class="hud-footer__brand">
+        <img src="assets/diamond-dogs.png" alt="Diamond Dogs" class="hud-footer__emblem" width="32" height="27" />
+        <span><strong>VITOR BOMFIM CUNHA</strong> · Portfólio Acadêmico Digital · DSM — FATEC São José dos Campos</span>
+      </div>
+      <div class="hud-footer__meta">
+        <span>END OF FILE // 2026</span>
+        <a href="#top">VOLTAR AO TOPO ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
